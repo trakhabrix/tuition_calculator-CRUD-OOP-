@@ -30,9 +30,14 @@ def tui_calc_menu():
                 pass_input = (input("Enter Your Password: "))
                 if pass_input == password:
                     CRUD.update_student()
+                else:
+                    ("Wrong Password")
+                    tui_calc_menu
             elif admin_perm == 2:
                 print ("This is only for admin.")
                 tui_calc_menu
+            else: 
+                print ('Invalid Choice')
         elif choice_menu == 5:
             CRUD.delete_student()
         elif choice_menu == 6:
