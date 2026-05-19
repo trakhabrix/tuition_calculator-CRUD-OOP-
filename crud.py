@@ -75,9 +75,8 @@ Total Fee:{student.total_fee}
     # Update Student
     def update_student(self):
         self.view_all()
-        id_choose = (input("Enter ID to update: "))
-        if id_choose in self.student_store:
-            student = self.student_store[id_choose]
+        id_choose = int(input("Enter ID to update: "))
+        # Notes: need to fix (not saving the subject)
         for student_id, student in self.student_store.items():
             if id_choose == student_id:
                 new_name = input("Enter new name (leave blank to keep): ")
